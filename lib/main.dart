@@ -15,7 +15,7 @@ class WelcomePage extends StatelessWidget {
     return Material(
       child: Container(
         child: Center(
-          child: const Text('hello to you'),
+          child: const Text('hello to you Bessong'),
         ),
       ),
     );
