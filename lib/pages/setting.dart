@@ -81,9 +81,11 @@ class _SettingPageState extends State<SettingPage> {
 
 
 class GestureDetection extends StatelessWidget {
-  const GestureDetection({Key? key, required this.text, required this.icon, this.press}) : super(key: key);
+  const GestureDetection({Key? key, required this.text, this.icon, this.press}) : super(key: key);
 
-  final String text, icon;
+  // final String icon, size, color;
+  final String icon;
+  final String text;
   final VoidCallback? press;
 
   @override
@@ -101,11 +103,11 @@ class GestureDetection extends StatelessWidget {
         onPressed: press,
         child: Row(
           children: [
-            SvgPicture(
-              icon,
-              width: 22,
+            Container(
+                child: Text(icon) //Icon(Icons.account_circle_outlined)
+              // TO DO
+              //add widget to render an icon here!!
             ),
-            //
             //const Icon(Icons.account_circle),
             const SizedBox(width: 20),
             Expanded(child: Text(text)),
