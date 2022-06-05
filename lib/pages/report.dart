@@ -10,6 +10,18 @@ class ResultPage extends StatefulWidget {
 class _ResultPageState extends State<ResultPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: <Widget>[
+            Container(), // To Do: show taken pic.
+            Container(), // To Do: Display auto ml Result from image.
+            Container() // To Do: Button to send info to db and admin dashboard.
+          ],
+        ),
+      ),
+    );
   }
 }
