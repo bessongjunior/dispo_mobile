@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:dispo_mobile/models/onboardingcontent.dart';
-
+import 'package:dispo_mobile/utils/utilities.dart';
+import 'package:dispo_mobile/widgets/themebutton.dart';
+import 'package:dispo_mobile/utils/appcolors.dart';
 
 class OnboardingPage extends StatefulWidget {
   @override
@@ -8,7 +10,7 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
-  List<OnboardingContent> _content = Utils.getOnboarding();
+  final List<OnboardingContent> _content = Utils.getOnboarding();
   int pageIndex = 0;
   PageController? _controller;
 
@@ -70,7 +72,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                               const SizedBox(height: 20),
                                               Text(_content[index].message!,
                                                   textAlign: TextAlign.center,
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       color: AppColors.MAIN_COLOR,
                                                       fontSize: 20
                                                   )
@@ -80,15 +82,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                         ),
                                         Visibility(
                                           visible: index == _content.length - 1,
-                                          child: RaisedButton(onPressed: (){ }, label: 'Hello', color: Colors.green, highlightColor: Colors.greenAccent,)
-                                          // ThemeButton(
-                                          //   onClick: () {
-                                          //     Utils.mainAppNav.currentState!.pushNamed('/mainpage');
-                                          //   },
-                                          //   label: 'Entrar Ahora!',
-                                          //   color: AppColors.DARK_GREEN,
-                                          //   highlight: AppColors.DARKER_GREEN,
-                                          // ),
+                                          child: ThemeButton(
+                                            onClick: () {
+                                              // Utils.mainAppNav.currentState!.pushNamed('/mainpage');
+                                            },
+                                            label: 'Entrar Ahora!',
+                                            color: AppColors.DARK_GREEN,
+                                            highlight: AppColors.DARKER_GREEN,
+                                          ),
                                         )
                                       ],
                                     )
@@ -105,14 +106,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 onTap: () {
                                   _controller!.animateTo(
                                       MediaQuery.of(context).size.width * index,
-                                      duration: Duration(milliseconds: 500),
+                                      duration: const Duration(milliseconds: 500),
                                       curve: Curves.easeInOut
                                   );
                                 },
                                 child: Container(
                                   width: 20,
                                   height: 20,
-                                  margin: EdgeInsets.all(10),
+                                  margin: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       color: AppColors.MAIN_COLOR,
                                       borderRadius: BorderRadius.circular(50),
@@ -126,13 +127,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       )
                   ),
                   const SizedBox(height: 20),
-                  RaisedButton(onPressed: (){ }, label: 'Hello', color: Colors.green, highlightColor: Colors.greenAccent,)
-                  // ThemeButton(
-                  //     onClick: () {
-                  //       Utils.mainAppNav.currentState!.pushNamed('/mainpage');
-                  //     },
-                  //     label: 'Saltar Onboarding'
-                  // )
+                  ThemeButton(
+                      onClick: () {
+                        // Utils.mainAppNav.currentState!.pushNamed('/mainpage');
+                      },
+                      label: 'Saltar Onboarding'
+                  )
                 ],
               ),
             )
