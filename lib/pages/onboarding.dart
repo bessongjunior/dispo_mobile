@@ -5,6 +5,8 @@ import 'package:dispo_mobile/widgets/themebutton.dart';
 import 'package:dispo_mobile/utils/appcolors.dart';
 
 class OnboardingPage extends StatefulWidget {
+  const OnboardingPage({Key? key}) : super(key: key);
+
   @override
   _OnboardingPageState createState() => _OnboardingPageState();
 }
