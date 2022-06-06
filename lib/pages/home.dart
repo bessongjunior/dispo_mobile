@@ -7,7 +7,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Container(),
+      body: SingleChildScrollView(
+
+        child: Column(
+          children: <Widget>[
+            Container(), //To Do:  add text and image below to take a pic
+            Container(), //To Do: radio button for either home or public
+            Container(
+               //To Do: take pic and take video
+            )
+          ],
+        ),
+      ),
     );
   }
 }

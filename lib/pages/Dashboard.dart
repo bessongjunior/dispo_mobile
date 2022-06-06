@@ -10,6 +10,17 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 10), //modify to all
+        child: Column(
+            children: [
+              Container(), // To Do:
+              Container() // To Do:
+            ],
+        ),
+      ),
+    );
   }
 }

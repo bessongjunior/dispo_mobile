@@ -13,7 +13,7 @@ class _ResultPageState extends State<ResultPage> {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(vertical: 10),  //modify to all
         child: Column(
           children: <Widget>[
             Container(), // To Do: show taken pic.
