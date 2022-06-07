@@ -30,7 +30,7 @@ class _PickImageState extends State<PickImage> {
           ),
           ListTile(
             leading: const Icon(Icons.image),
-            title: const Text('Pick from gallery'),
+            title: const Text('Pick a video'),
             onTap: () async {
               try {
                 final PickedFile pickedFile =
