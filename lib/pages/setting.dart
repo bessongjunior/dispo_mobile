@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -61,7 +62,7 @@ class _SettingPageState extends State<SettingPage> {
                   children: <Widget>[
                     GestureDetection (
                       text: "My Account",
-                     icon:  Icon(Icons.account_circle),
+                     icon:  '',
                       press: () => {},
                     ),
 
@@ -81,7 +82,7 @@ class _SettingPageState extends State<SettingPage> {
 
 
 class GestureDetection extends StatelessWidget {
-  const GestureDetection({Key? key, required this.text, this.icon, this.press}) : super(key: key);
+  const GestureDetection({Key? key, required this.text, required this.icon, this.press}) : super(key: key);
 
   // final String icon, size, color;
   final String icon;
