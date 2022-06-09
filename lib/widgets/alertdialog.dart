@@ -59,4 +59,30 @@ class AlertDialogTheme extends StatelessWidget {
   }
 }
 
-
+//
+// const AlertDialog({
+// Key? key,
+// this.title,
+// this.titlePadding,
+// this.titleTextStyle,
+// this.content,
+// this.contentPadding = const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 24.0),
+// this.contentTextStyle,
+// this.actions,
+// this.actionsPadding = EdgeInsets.zero,
+// this.actionsAlignment,
+// this.actionsOverflowAlignment,
+// this.actionsOverflowDirection,
+// this.actionsOverflowButtonSpacing,
+// this.buttonPadding,
+// this.backgroundColor,
+// this.elevation,
+// this.semanticLabel,
+// this.insetPadding = _defaultInsetPadding,
+// this.clipBehavior = Clip.none,
+// this.shape,
+// this.alignment,
+// this.scrollable = false,
+// }) : assert(contentPadding != null),
+// assert(clipBehavior != null),
+// super(key: key);

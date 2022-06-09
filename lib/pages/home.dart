@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 class HomePages extends StatelessWidget {
   const HomePages({Key? key}) : super(key: key);
 
-  // ValueSite _site = valueSite.test;
-  //
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,25 +22,65 @@ class HomePages extends StatelessWidget {
               ),
             ),
             Container( //To Do: radio button for either home or public
-              child: Column(
-                children: const <Widget>[
-                  ListTile(
-                    title: Text(''),
-                    // leading: Radio(value: valueSite.test, groupValue: _site, onChanged: (ValueSite value){setSTATE((){_site = value;});},),
-                  ),
-                  ListTile(),
-                  ListTile()
-                ],
-              ),
+              child: const RadioButton(),
             ),
+            const SizedBox(height: 10),
             Container(
                //To Do: take pic and take video
-              child: Row(
+              child: GridView.count(
+                primary: false,
+                padding: const EdgeInsets.all(20),
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                crossAxisCount: 2,
                 children: <Widget>[
-                  Container(),
-                  Container()
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    color: Colors.blue[400],
+                    child: Row(
+                      children: <Widget>[
+                        const Icon(Icons.camera_alt, size: 25, color: Colors.deepPurple),
+                        // ToDO: add circle with plus sign as btn to get picture on tab, then add text to say get picture!! add all in container.
+                        Container()
+                      ],
+                    ),
+                    // const Text("He'd have you all unravel at the"),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    color: Colors.blue[500],
+                    child: const Text('Heed not the rabble'),
+                  ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(8),
+                  //   color: Colors.teal[300],
+                  //   child: const Text('Sound of screams but the'),
+                  // ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(8),
+                  //   color: Colors.teal[400],
+                  //   child: const Text('Who scream'),
+                  // ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(8),
+                  //   color: Colors.teal[500],
+                  //   child: const Text('Revolution is coming...'),
+                  // ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(8),
+                  //   color: Colors.teal[600],
+                  //   child: const Text('Revolution, they...'),
+                  // ),
                 ],
-              ),
+              )
+
+
+              // Row(
+              //   children: <Widget>[
+              //     Container(),
+              //     Container()
+              //   ],
+              // ),
             )
           ],
         ),
@@ -51,81 +89,46 @@ class HomePages extends StatelessWidget {
   }
 }
 
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+enum GarbageLocation { publicly, homely }
+class RadioButton extends StatefulWidget {
+  const RadioButton({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<RadioButton> createState() => _RadioButtonState();
 }
 
-class _HomePageState extends State<HomePage> {
-  ValueSite _site = valueSite.test;
+class _RadioButtonState extends State<RadioButton> {
+  GarbageLocation? _character = GarbageLocation.publicly;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(  //To Do:  add text and image below as in design
-              child: Column(
-                children: <Widget>[
-                  const Text(''),
-                  Container(child: Image.asset('assets/images/home.png'))
-                ],
-              ),
-            ),
-            const SizedBox(height: 10),
-            Container( //To Do: radio button for either home or public
-              child: Column(
-                children: const <Widget>[
-                  ListTile(
-                    title: Text(''),
-                    leading: Radio(value: valueSite.test, groupValue: _site, onChanged: (ValueSite value){setState((){_site = value;});},),
-                  ),
-                  ListTiclass ValueSite {
-
-}le(
-                    title: Text(''),
-                    leading: Radio(value: value,
-                                    groupValue: groupValue,
-                                    onChanged: () {setState( (){
-
-                                    });
-                                                  },
-                              ),
-                  ),
-                  // ListTile(title: Text(''),
-                  //   leading: Radio(value: value,
-                  //     groupValue: groupValue,
-                  //     onChanged: () {setState( (){
-                  //
-                  //     });
-                  //     },
-                  //   ),
-                  // )
-                ],
-              ),
-            ),
-            const SizedBox(height: 10),
-            Container(
-              //To Do: take pic and take video
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    child: const Card(),
-                  ),
-                  Container(
-                    child: const Card(),
-                  )
-                ],
-              ),
-            )
-          ],
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: const Text('Public base'),
+          leading: Radio<GarbageLocation>(
+            value: GarbageLocation.publicly,
+            groupValue: _character,
+            onChanged: (GarbageLocation? value) {
+              setState(() {
+                _character = value;
+              });
+            },
+          ),
         ),
-      ),
+        ListTile(
+          title: const Text('Home base'),
+          leading: Radio<GarbageLocation>(
+            value: GarbageLocation.homely,
+            groupValue: _character,
+            onChanged: (GarbageLocation? value) {
+              setState(() {
+                _character = value;
+              });
+            },
+          ),
+        ),
+      ],
     );
   }
 }
