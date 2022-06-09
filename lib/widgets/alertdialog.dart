@@ -47,3 +47,16 @@ class Dialogs extends StatelessWidget {
     );
   }
 }
+
+//Custom dialog for both ios and android
+
+class AlertDialogTheme extends StatelessWidget {
+  const AlertDialogTheme({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
