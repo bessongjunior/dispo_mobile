@@ -26,7 +26,7 @@ class HomePages extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Container(
-               //To Do: take pic and take video
+               //ToDo: take pic and take video method to be added
               child: GridView.count(
                 primary: false,
                 padding: const EdgeInsets.all(20),
@@ -39,48 +39,72 @@ class HomePages extends StatelessWidget {
                     color: Colors.blue[400],
                     child: Row(
                       children: <Widget>[
-                        const Icon(Icons.camera_alt, size: 25, color: Colors.deepPurple),
-                        // ToDO: add circle with plus sign as btn to get picture on tab, then add text to say get picture!! add all in container.
-                        Container()
+                        Column(children: <Widget>[
+                          Row(children: <Widget>[
+                            const Icon(Icons.camera_alt, size: 25, color: Colors.deepPurple),
+                            //TODO: add a button to walk lik a floating action button either floating action btn or elevated btn
+                            FloatingActionButton(
+                              onPressed: () {},
+                              // tooltip: 'Increment',
+                              child: const Icon(Icons.add),
+                            )
+                            // ElevatedButton(
+                            //   onPressed: () {},
+                            //   child: Icon( //<-- SEE HERE
+                            //     Icons.train,
+                            //     color: Colors.black,
+                            //     size: 54,
+                            //   ),
+                            //   style: ElevatedButton.styleFrom(
+                            //     shape: CircleBorder(), //<-- SEE HERE
+                            //     padding: EdgeInsets.all(20),
+                            //   ),
+                            // ),
+                          ],
+                          ),
+                          const Text('Take an image or photo', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
+                        ],
+                        ),
                       ],
                     ),
-                    // const Text("He'd have you all unravel at the"),
                   ),
                   Container(
                     padding: const EdgeInsets.all(10),
                     color: Colors.blue[500],
-                    child: const Text('Heed not the rabble'),
+                    child: Row(
+                      children: <Widget>[
+                        Column(children: <Widget>[
+                          Row(children: <Widget>[
+                            const Icon(Icons.video_camera_back, size: 25, color: Colors.deepPurple),
+                            //TODO: add a button to walk lik a floating action button either floating action btn or elevated btn
+                            FloatingActionButton(
+                              onPressed: () {},
+                              // tooltip: 'Increment',
+                              child: const Icon(Icons.add),
+                            )
+                            // ElevatedButton(
+                            //   onPressed: () {},
+                            //   child: Icon( //<-- SEE HERE
+                            //     Icons.train,
+                            //     color: Colors.black,
+                            //     size: 54,
+                            //   ),
+                            //   style: ElevatedButton.styleFrom(
+                            //     shape: CircleBorder(), //<-- SEE HERE
+                            //     padding: EdgeInsets.all(20),
+                            //   ),
+                            // ),
+                          ],
+                          ),
+                          const Text('Take a short Video', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
+                        ],
+                        ),
+                      ],
+                    ),
                   ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(8),
-                  //   color: Colors.teal[300],
-                  //   child: const Text('Sound of screams but the'),
-                  // ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(8),
-                  //   color: Colors.teal[400],
-                  //   child: const Text('Who scream'),
-                  // ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(8),
-                  //   color: Colors.teal[500],
-                  //   child: const Text('Revolution is coming...'),
-                  // ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(8),
-                  //   color: Colors.teal[600],
-                  //   child: const Text('Revolution, they...'),
-                  // ),
                 ],
               )
 
-
-              // Row(
-              //   children: <Widget>[
-              //     Container(),
-              //     Container()
-              //   ],
-              // ),
             )
           ],
         ),
