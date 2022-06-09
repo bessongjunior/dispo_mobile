@@ -1,26 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:dispo_mobile/pages/splash.dart';
+import 'package:dispo_mobile/pages/onboarding.dart';
 
 void main() {
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(goToPage: const WelcomePage(), duration: 4)));
+      home: SplashPage(goToPage: const OnboardingPage(), duration: 4)));
 }
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-        child: Center(
-          child: const Text('hello to you Bessong'),
-        ),
-      ),
-    );
-  }
-}
 
 
 

@@ -8,6 +8,7 @@ class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _OnboardingPageState createState() => _OnboardingPageState();
 }
 
@@ -70,7 +71,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                                 alignment: Alignment.topRight,
                                                 child: Icon(Icons.account_balance_sharp, size: 22,),
                                               ),
-                                              Image.asset('assets/imgs/${_content[index].img}.png'),
+                                              Image.asset('assets/images/${_content[index].img}.png'),
                                               const SizedBox(height: 20),
                                               Text(_content[index].message!,
                                                   textAlign: TextAlign.center,
