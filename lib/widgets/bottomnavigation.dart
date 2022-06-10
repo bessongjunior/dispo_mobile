@@ -98,13 +98,13 @@ class _MyHomePageState extends State<MyHomePage>
                   ),
                   text: 'Setting',
                 ),
-                // Tab(
-                //   icon: Icon(
-                //     Icons.more,
-                //     size: 24.0,
-                //   ),
-                //   text: 'More',
-                // ),
+                Tab(
+                  icon: Icon(
+                    Icons.notification_important,
+                    size: 24.0,
+                  ),
+                  text: 'Notification',
+                ),
               ],
               controller: _tabController,
             ),

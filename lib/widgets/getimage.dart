@@ -1,3 +1,6 @@
+// ignore_for_file: use_build_context_synchronously
+import 'dart:io';
+import 'package:flutter/foundation.dart';
 import'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -9,13 +12,13 @@ class PickImage extends StatefulWidget {
 }
 
 class _PickImageState extends State<PickImage> {
-  File _imageFile;
+  late File _imageFile;
   String _mlResult = '<no result>';
   final _picker = ImagePicker();
 
   Future<bool> _pickImage() async {
-    setState(() => this._imageFile = null);
-    final File imageFile = await showDialog<File>(
+    setState(() => _imageFile = null);
+    final File? imageFile = await showDialog<File>(
       context: context,
       builder: (ctx) => SimpleDialog(
         children: <Widget>[
@@ -23,7 +26,7 @@ class _PickImageState extends State<PickImage> {
             leading: const Icon(Icons.camera_alt),
             title: const Text('Take picture'),
             onTap: () async {
-              final PickedFile pickedFile =
+              final PickedFile? pickedFile =
               await _picker.getImage(source: ImageSource.camera);
               Navigator.pop(ctx, File(pickedFile.path));
             },
@@ -33,7 +36,7 @@ class _PickImageState extends State<PickImage> {
             title: const Text('Pick a video'),
             onTap: () async {
               try {
-                final PickedFile pickedFile =
+                final PickedFile? pickedFile =
                 await _picker.getImage(source: ImageSource.gallery);
                 Navigator.pop(ctx, File(pickedFile.path));
               } catch (e) {
@@ -51,8 +54,10 @@ class _PickImageState extends State<PickImage> {
       );
       return false;
     }
-    setState(() => this._imageFile = imageFile);
-    print('picked image: ${this._imageFile}');
+    setState(() => _imageFile = imageFile);
+    if (kDebugMode) {
+      print('picked image: $_imageFile');
+    }
     return true;
   }
 

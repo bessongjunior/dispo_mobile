@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
-class WelcomePage extends StatefulWidget {
-  const WelcomePage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  State<WelcomePage> createState() => _WelcomePageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _WelcomePageState extends State<WelcomePage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: Container(
+        child: Center(
+          child: const Text('Login Page'),
+        ),
+      )
+    );
   }
 }

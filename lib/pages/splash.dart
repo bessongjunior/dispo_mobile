@@ -21,7 +21,7 @@ class SplashPage extends StatelessWidget {
               children: [
                 const Align(
                   alignment: Alignment.center,
-                  child: Icon(Icons.accessibility),
+                  child: Icon(Icons.account_balance_sharp, size: 100),
                 ),
                 Align(
                   alignment: Alignment.center,

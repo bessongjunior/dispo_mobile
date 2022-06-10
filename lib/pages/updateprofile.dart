@@ -51,8 +51,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
               ),
             ),
             const SizedBox(height: 20),
-            // To Do
-            //app forms to update profile info here
+            //ToDo: app forms to update profile info here
           ]
         ),
       ),

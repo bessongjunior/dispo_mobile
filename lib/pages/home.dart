@@ -41,25 +41,25 @@ class HomePages extends StatelessWidget {
                       children: <Widget>[
                         Column(children: <Widget>[
                           Row(children: <Widget>[
-                            const Icon(Icons.camera_alt, size: 25, color: Colors.deepPurple),
+                            const Icon(Icons.camera_alt, size: 30, color: Colors.deepPurple),
                             //TODO: add a button to walk lik a floating action button either floating action btn or elevated btn
-                            FloatingActionButton(
-                              onPressed: () {},
-                              // tooltip: 'Increment',
-                              child: const Icon(Icons.add),
-                            )
-                            // ElevatedButton(
+                            // FloatingActionButton(
                             //   onPressed: () {},
-                            //   child: Icon( //<-- SEE HERE
-                            //     Icons.train,
-                            //     color: Colors.black,
-                            //     size: 54,
-                            //   ),
-                            //   style: ElevatedButton.styleFrom(
-                            //     shape: CircleBorder(), //<-- SEE HERE
-                            //     padding: EdgeInsets.all(20),
-                            //   ),
-                            // ),
+                            //   // tooltip: 'Increment',
+                            //   child: const Icon(Icons.add),
+                            // )
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(), //<-- SEE HERE
+                                padding: const EdgeInsets.all(20),
+                              ),
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: 24,
+                              ),
+                            ),
                           ],
                           ),
                           const Text('Take an image or photo', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
@@ -75,25 +75,25 @@ class HomePages extends StatelessWidget {
                       children: <Widget>[
                         Column(children: <Widget>[
                           Row(children: <Widget>[
-                            const Icon(Icons.video_camera_back, size: 25, color: Colors.deepPurple),
+                            const Icon(Icons.video_camera_back, size: 30, color: Colors.deepPurple),
                             //TODO: add a button to walk lik a floating action button either floating action btn or elevated btn
-                            FloatingActionButton(
-                              onPressed: () {},
-                              // tooltip: 'Increment',
-                              child: const Icon(Icons.add),
-                            )
-                            // ElevatedButton(
+                            // FloatingActionButton(
                             //   onPressed: () {},
-                            //   child: Icon( //<-- SEE HERE
-                            //     Icons.train,
-                            //     color: Colors.black,
-                            //     size: 54,
-                            //   ),
-                            //   style: ElevatedButton.styleFrom(
-                            //     shape: CircleBorder(), //<-- SEE HERE
-                            //     padding: EdgeInsets.all(20),
-                            //   ),
-                            // ),
+                            //   // tooltip: 'Increment',
+                            //   child: const Icon(Icons.add),
+                            // )
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(), //<-- SEE HERE
+                                padding: const EdgeInsets.all(20),
+                              ),
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.black,
+                                size: 22,
+                              ),
+                            ),
                           ],
                           ),
                           const Text('Take a short Video', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
