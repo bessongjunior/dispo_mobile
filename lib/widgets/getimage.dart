@@ -17,7 +17,7 @@ class _PickImageState extends State<PickImage> {
   final _picker = ImagePicker();
 
   Future<bool> _pickImage() async {
-    setState(() => _imageFile = null);
+    setState(() => _imageFile );
     final File? imageFile = await showDialog<File>(
       context: context,
       builder: (ctx) => SimpleDialog(
@@ -28,7 +28,7 @@ class _PickImageState extends State<PickImage> {
             onTap: () async {
               final PickedFile? pickedFile =
               await _picker.getImage(source: ImageSource.camera);
-              Navigator.pop(ctx, File(pickedFile.path));
+              // Navigator.pop(ctx, File(pickedFile.path));
             },
           ),
           ListTile(
@@ -38,7 +38,7 @@ class _PickImageState extends State<PickImage> {
               try {
                 final PickedFile? pickedFile =
                 await _picker.getImage(source: ImageSource.gallery);
-                Navigator.pop(ctx, File(pickedFile.path));
+                // Navigator.pop(ctx, File(pickedFile.path));
               } catch (e) {
                 print(e);
                 Navigator.pop(ctx, null);
