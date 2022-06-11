@@ -53,29 +53,33 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             const SizedBox(height: 20),
+            //Todo: add account text as in design
             ProfileMenu(
-              text: "My Account",
-              icon: const Icon(Icons.account_circle),//"assets/icons/User Icon.svg",
+              text: "Username",
+              icon: const Icon(Icons.account_circle),
               press: () => {},
             ),
+            //Todo: add password here as in design
+            //Todo:add contact details as in design
             ProfileMenu(
-              text: "Notifications",
-              icon: const Icon(Icons.notifications),//"assets/icons/Bell.svg",
+              text: "Email Address",
+              icon: const Icon(Icons.notifications),
               press: () {},
             ),
             ProfileMenu(
-              text: "Settings",
-              icon: const Icon(Icons.settings),//"assets/icons/Settings.svg",
+              text: "Phone number",
+              icon: const Icon(Icons.settings),
               press: () {},
             ),
             ProfileMenu(
-              text: "Help Center",
-              icon: const Icon(Icons.help),//"assets/icons/Question mark.svg",
+              text: "Residential Address",
+              icon: const Icon(Icons.help),
               press: () {},
             ),
+            //Todo: add prodile update text as in design
             ProfileMenu(
-              text: "Log Out",
-              icon: const Icon(Icons.logout),//"assets/icons/Log out.svg",
+              text: "Update your profile",
+              icon: const Icon(Icons.logout),
               press: () {},
             ),
           ],
@@ -107,10 +111,8 @@ class ProfileMenu extends StatelessWidget {
         style: TextButton.styleFrom(
           primary: Colors.white,
           padding: const EdgeInsets.all(20),
-          shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          backgroundColor: const Color(0xFFF5F6F9),
-
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          backgroundColor: const Color(0xFFF5F6F9)
         ),
         onPressed: press,
         child: Row(

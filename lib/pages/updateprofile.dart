@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class UpdateProfile extends StatefulWidget {
   const UpdateProfile({Key? key}) : super(key: key);
@@ -43,7 +43,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                           backgroundColor: const Color(0xFFF5F6F9),
                         ),
                         onPressed: () {},
-                        child: SvgPicture.asset("assets/icons/Camera Icon.svg"),
+                        child: const Icon(Icons.camera_alt)//SvgPicture.asset("assets/icons/Camera Icon.svg"),
                       ),
                     ),
                   )
