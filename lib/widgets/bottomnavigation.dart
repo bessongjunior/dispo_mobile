@@ -1,5 +1,4 @@
 // ignore_for_file: library_private_types_in_public_api
-
 import 'package:dispo_mobile/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage>
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
         children: const <Widget>[
-          HomePages(),
+          HomePage(),
           ProfilePage(),
           DashboardPage(),
           SettingPage(),

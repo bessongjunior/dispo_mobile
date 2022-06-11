@@ -1,5 +1,7 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 
 class ProfilePage extends StatefulWidget {
@@ -53,27 +55,27 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 20),
             ProfileMenu(
               text: "My Account",
-              icon: "assets/icons/User Icon.svg",
+              icon: const Icon(Icons.account_circle),//"assets/icons/User Icon.svg",
               press: () => {},
             ),
             ProfileMenu(
               text: "Notifications",
-              icon: "assets/icons/Bell.svg",
+              icon: const Icon(Icons.notifications),//"assets/icons/Bell.svg",
               press: () {},
             ),
             ProfileMenu(
               text: "Settings",
-              icon: "assets/icons/Settings.svg",
+              icon: const Icon(Icons.settings),//"assets/icons/Settings.svg",
               press: () {},
             ),
             ProfileMenu(
               text: "Help Center",
-              icon: "assets/icons/Question mark.svg",
+              icon: const Icon(Icons.help),//"assets/icons/Question mark.svg",
               press: () {},
             ),
             ProfileMenu(
               text: "Log Out",
-              icon: "assets/icons/Log out.svg",
+              icon: const Icon(Icons.logout),//"assets/icons/Log out.svg",
               press: () {},
             ),
           ],
@@ -85,15 +87,17 @@ class _ProfilePageState extends State<ProfilePage> {
 
 
 class ProfileMenu extends StatelessWidget {
-  const ProfileMenu({
+  final String text;
+  Widget? icon;
+  final VoidCallback? press;
+
+  ProfileMenu({
     Key? key,
     required this.text,
     required this.icon,
     this.press,
   }) : super(key: key);
 
-  final String text, icon;
-  final VoidCallback? press;
 
   @override
   Widget build(BuildContext context) {
@@ -106,15 +110,17 @@ class ProfileMenu extends StatelessWidget {
           shape:
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           backgroundColor: const Color(0xFFF5F6F9),
+
         ),
         onPressed: press,
         child: Row(
           children: [
-            SvgPicture.asset(
-              icon,
-              color: Colors.white,
-              width: 22,
-            ),
+           icon!,
+            // SvgPicture.asset(
+            //   color: Colors.white,
+            //   width: 22,
+            //   icon,
+            // ),
             const SizedBox(width: 20),
             Expanded(child: Text(text)),
             const Icon(Icons.arrow_forward_ios),

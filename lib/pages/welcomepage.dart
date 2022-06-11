@@ -63,7 +63,7 @@ class WelcomePage extends StatelessWidget {
                       color: Colors.deepPurple, //AppColors.MAIN_COLOR,
                       onClick: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const HomePages()));
+                            MaterialPageRoute(builder: (context) => const HomePage()));
                         // Utils.mainAppNav.currentState!.pushNamed('/mainpage');
                       },
                     ),
