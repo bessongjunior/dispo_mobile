@@ -87,7 +87,7 @@ class WelcomePage extends StatelessWidget {
                         borderWidth: 4,
                         onClick: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => const LoginPage()));
+                              MaterialPageRoute(builder: (context) => const LogInPage()));
                         }
                     )
                   ],

@@ -1,5 +1,4 @@
 // ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 import 'package:dispo_mobile/utils/formerror.dart';
 import 'package:dispo_mobile/widgets/themebutton.dart';
@@ -7,14 +6,15 @@ import 'package:dispo_mobile/utils/constants.dart';
 import 'package:dispo_mobile/utils/sizeconfig.dart';
 import 'package:dispo_mobile/widgets/sociallogin.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+
+class LogInPage extends StatefulWidget {
+  const LogInPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<LogInPage> createState() => _LogInPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LogInPageState extends State<LogInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: SizeConfig.screenHeight * 0.08),
-                  const SignForm(),
+                  const SignInForm(),
                   SizedBox(height: SizeConfig.screenHeight * 0.08),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -97,14 +97,14 @@ class _LoginPageState extends State<LoginPage> {
 
 
 
-class SignForm extends StatefulWidget {
-  const SignForm({Key? key}) : super(key: key);
+class SignInForm extends StatefulWidget {
+  const SignInForm({Key? key}) : super(key: key);
 
   @override
-  _SignFormState createState() => _SignFormState();
+  _SignInFormState createState() => _SignInFormState();
 }
 
-class _SignFormState extends State<SignForm> {
+class _SignInFormState extends State<SignInForm> {
   final _formKey = GlobalKey<FormState>();
   String? email;
   String? password;

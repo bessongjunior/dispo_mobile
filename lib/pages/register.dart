@@ -7,7 +7,6 @@ import 'package:dispo_mobile/utils/sizeconfig.dart';
 import 'package:dispo_mobile/widgets/sociallogin.dart';
 
 
-
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({Key? key}) : super(key: key);
 
