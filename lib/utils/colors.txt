@@ -1,0 +1,16 @@
+#ff673ab7 main app color
+#ff6531c4 primary app color
+
+-#ff94ffb9 other/main app color
+-#fff7f6fb app bg color // also #fffffff
+-#ffe7e5f1 bg color secondary
+
+button colors
+-#ffe7e5f1  main button
+-#ffdbdadf button secondary
+-#ff49148b button dark
+
+text colors
+-#ff000000 text primary black
+-#ff6fd4bf  text secondary
+-#ffffffff text tertiary

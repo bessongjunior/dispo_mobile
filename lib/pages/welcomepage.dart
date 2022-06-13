@@ -1,8 +1,10 @@
-import 'package:dispo_mobile/pages/home.dart';
 import 'package:dispo_mobile/pages/login.dart';
-import 'package:dispo_mobile/pages/onboarding.dart';
+import 'package:dispo_mobile/pages/register.dart';
+// import 'package:dispo_mobile/pages/profile.dart';
+import 'package:dispo_mobile/pages/setting.dart';
 import 'package:dispo_mobile/widgets/themebutton.dart';
 import 'package:flutter/material.dart';
+// import 'package:dispo_mobile/widgets/bottomnavigation.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -40,7 +42,7 @@ class WelcomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 50),
-                    const Text('Welcome/a',
+                    const Text('Welcome to Dispo',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.white,
@@ -63,7 +65,7 @@ class WelcomePage extends StatelessWidget {
                       color: Colors.deepPurple, //AppColors.MAIN_COLOR,
                       onClick: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const HomePage()));
+                            MaterialPageRoute(builder: (context) => const  SettingPage()));
                         // Utils.mainAppNav.currentState!.pushNamed('/mainpage');
                       },
                     ),
@@ -73,7 +75,7 @@ class WelcomePage extends StatelessWidget {
                       color: const Color(0xFF5B3B9B), //AppColors.DARK_GREEN,
                       onClick: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const OnboardingPage()));
+                            MaterialPageRoute(builder: (context) => const LogInPage()));
                         // Utils.mainAppNav.currentState!.pushNamed('/onboardingpage');
                       },
                     ),
@@ -87,7 +89,7 @@ class WelcomePage extends StatelessWidget {
                         borderWidth: 4,
                         onClick: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => const LogInPage()));
+                              MaterialPageRoute(builder: (context) => const RegistrationPage()));
                         }
                     )
                   ],

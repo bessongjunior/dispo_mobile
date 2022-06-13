@@ -8,13 +8,13 @@ class NotificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CupertinoPageScaffold(
         navigationBar:  CupertinoNavigationBar(
-          trailing: Icon(CupertinoIcons.bars),
+          trailing: Icon(CupertinoIcons.trash),
           middle: Text('Notification'),
-          leading: Icon(CupertinoIcons.trash),
+          leading: Icon(CupertinoIcons.bars),
         ),
       child: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
-        scrollDirection: Axis.vertical,
+        // scrollDirection: Axis.vertical,
         child: Center( child: Text('notification'),),
       ),
     );

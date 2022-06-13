@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 import 'package:dispo_mobile/pages/home.dart';
+import 'package:dispo_mobile/pages/notification.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/Dashboard.dart';
@@ -35,10 +36,10 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: Text(title),
+      //   centerTitle: true,
+      // ),
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
@@ -47,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage>
           ProfilePage(),
           DashboardPage(),
           SettingPage(),
-          // More(),
+          NotificationPage(),
         ],
       ),
       bottomNavigationBar: Container(

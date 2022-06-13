@@ -10,14 +10,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(vertical: 18.0),
+        padding: const EdgeInsets.symmetric(vertical: 7.5),
         child: Column(
           children: <Widget>[
             Column(
               children: <Widget>[
                 const Text('Take a Photo or Video of\n Waste or Garbage any time\n Or anywhere', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400) ),
                 Center(
-                    child: Image.asset('assets/images/home.png', height: 60,) //height and width props
+                    child: Image.asset('assets/images/onboarding1.png', height: 70,) //height and width props
                 )
               ],
             ),
@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Container(
                   padding: const EdgeInsets.all(10),
-                  color: Colors.blue[400],
+                  color: Colors.green,
                   child: Row(
                     children: <Widget>[
                       Column(children: <Widget>[
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.all(10),
-                  color: Colors.blue[500],
+                  color: Colors.green,
                   child: Row(
                     children: <Widget>[
                       Column(children: <Widget>[

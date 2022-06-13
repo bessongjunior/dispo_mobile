@@ -21,8 +21,8 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Column(
           children: [
             SizedBox(
-              height: 115,
-              width: 115,
+              height: 150,
+              width: 150,
               child: Stack(
                 fit: StackFit.expand,
                 clipBehavior: Clip.none,
@@ -30,25 +30,6 @@ class _ProfilePageState extends State<ProfilePage> {
                   CircleAvatar(
                     backgroundImage: AssetImage("assets/images/Profile Image.png"),
                   ),
-                  // Positioned(
-                  //   right: -16,
-                  //   bottom: 0,
-                  //   child: SizedBox(
-                  //     height: 46,
-                  //     width: 46,
-                  //     child: TextButton(
-                  //       style: TextButton.styleFrom(
-                  //         shape: RoundedRectangleBorder(
-                  //           borderRadius: BorderRadius.circular(50),
-                  //           side: const BorderSide(color: Colors.white),
-                  //         ),
-                  //         primary: Colors.white,
-                  //         backgroundColor: const Color(0xFFF5F6F9),
-                  //       ),
-                  //       onPressed: () {}, child: null,
-                  //     ),
-                  //   ),
-                  // )
                 ],
               ),
             ),
@@ -63,23 +44,23 @@ class _ProfilePageState extends State<ProfilePage> {
             //Todo:add contact details as in design
             ProfileMenu(
               text: "Email Address",
-              icon: const Icon(Icons.notifications),
+              icon: const Icon(Icons.mail),
               press: () {},
             ),
             ProfileMenu(
               text: "Phone number",
-              icon: const Icon(Icons.settings),
+              icon: const Icon(Icons.phone),
               press: () {},
             ),
             ProfileMenu(
               text: "Residential Address",
-              icon: const Icon(Icons.help),
+              icon: const Icon(Icons.place),
               press: () {},
             ),
             //Todo: add prodile update text as in design
             ProfileMenu(
               text: "Update your profile",
-              icon: const Icon(Icons.logout),
+              icon: const Icon(Icons.verified_user),
               press: () {},
             ),
           ],
@@ -112,7 +93,7 @@ class ProfileMenu extends StatelessWidget {
           primary: Colors.white,
           padding: const EdgeInsets.all(20),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          backgroundColor: const Color(0xFFF5F6F9)
+          backgroundColor: Colors.black26,//(0xFFF5F6F9)
         ),
         onPressed: press,
         child: Row(
