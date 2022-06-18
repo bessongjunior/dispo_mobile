@@ -56,7 +56,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                         borderRadius: BorderRadius.circular(50),
                                         boxShadow: [
                                           BoxShadow(
-                                              color: AppColors.MAIN_COLOR.withOpacity(0.3),
+                                              color: AppColors.Main_Color.withOpacity(0.3),
                                               blurRadius: 20,
                                               offset: Offset.zero
                                           )
@@ -76,7 +76,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                               Text(_content[index].message!,
                                                   textAlign: TextAlign.center,
                                                   style: const TextStyle(
-                                                      color: AppColors.MAIN_COLOR,
+                                                      color: AppColors.Main_Color,
                                                       fontSize: 20
                                                   )
                                               )
@@ -90,8 +90,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                               // Utils.mainAppNav.currentState!.pushNamed('/mainpage');
                                             },
                                             label: 'Entrar Ahora!',
-                                            color: AppColors.DARK_GREEN,
-                                            highlight: AppColors.DARKER_GREEN,
+                                            color: AppColors.Main_second,
+                                            highlight: AppColors.Dark_green,
                                           ),
                                         )
                                       ],
@@ -118,11 +118,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                   height: 20,
                                   margin: const EdgeInsets.all(10),
                                   decoration: BoxDecoration(
-                                      color: AppColors.MAIN_COLOR,
+                                      color: AppColors.Main_Color,
                                       borderRadius: BorderRadius.circular(50),
                                       border: Border.all(
                                           width: 6,
-                                          color: pageIndex == index ? AppColors.LIGHTER_GREEN : Theme.of(context).canvasColor
+                                          color: pageIndex == index ? AppColors.Main_Primary : Theme.of(context).canvasColor
                                       )
                                   ),
                                 ),
@@ -134,7 +134,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       onClick: () {
                         // Utils.mainAppNav.currentState!.pushNamed('/mainpage');
                       },
-                      label: 'Saltar Onboarding'
+                      label: 'Skip Onboarding'
                   )
                 ],
               ),
