@@ -1,4 +1,5 @@
 // ignore_for_file: library_private_types_in_public_api
+import 'package:dispo_mobile/utils/appcolors.dart';
 import 'package:flutter/material.dart';
 import 'package:dispo_mobile/utils/formerror.dart';
 import 'package:dispo_mobile/widgets/themebutton.dart';
@@ -75,7 +76,7 @@ class _LogInPageState extends State<LogInPage> {
                           "Sign Up",
                           style: TextStyle(
                               fontSize: getProportionateScreenWidth(16),
-                              color: kPrimaryColor),
+                              color: AppColors.Main_Color),
                         ),
                       ),
                     ],
@@ -141,7 +142,7 @@ class _SignInFormState extends State<SignInForm> {
             children: [
               Checkbox(
                 value: remember,
-                activeColor: kPrimaryColor,
+                activeColor: AppColors.Main_Color,
                 onChanged: (value) {
                   setState(() {
                     remember = value;

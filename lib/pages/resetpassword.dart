@@ -1,3 +1,4 @@
+import 'package:dispo_mobile/utils/appcolors.dart';
 import 'package:flutter/material.dart';
 import 'package:dispo_mobile/utils/formerror.dart';
 import 'package:dispo_mobile/widgets/themebutton.dart';
@@ -145,7 +146,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
                   "Sign Up",
                   style: TextStyle(
                       fontSize: getProportionateScreenWidth(16),
-                      color: kPrimaryColor),
+                      color: AppColors.Main_Color),
                 ),
               ),
             ],

@@ -1,4 +1,5 @@
 // ignore_for_file: must_be_immutable, non_constant_identifier_names
+import 'package:dispo_mobile/utils/appcolors.dart';
 import 'package:flutter/material.dart';
 import 'package:dispo_mobile/utils/formerror.dart';
 import 'package:dispo_mobile/widgets/themebutton.dart';
@@ -138,7 +139,7 @@ class _ResetPasswordTokenFormState extends State<ResetPasswordTokenForm> {
                     "Abort Operation",
                     style: TextStyle(
                         fontSize: getProportionateScreenWidth(16),
-                        color: kPrimaryColor),
+                        color: AppColors.Main_Color),
                   ),
                 ),
               ],

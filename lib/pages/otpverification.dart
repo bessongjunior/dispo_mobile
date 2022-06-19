@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:dispo_mobile/utils/appcolors.dart';
 import 'package:flutter/material.dart';
 import 'package:dispo_mobile/widgets/themebutton.dart';
 import 'package:dispo_mobile/utils/constants.dart';
@@ -187,7 +188,7 @@ Row buildTimer() {
         duration: const Duration(seconds: 30),
         builder: (_, dynamic value, child) => Text(
           "00:${value.toInt()}",
-          style: const TextStyle(color: kPrimaryColor),
+          style: const TextStyle(color: AppColors.Main_Color),
         ),
       ),
     ],
