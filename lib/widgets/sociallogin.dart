@@ -9,7 +9,7 @@ class SocialCard extends StatelessWidget {
     required this.press,
   }) : super(key: key);
 
-  final String? icon;
+  final Widget? icon;
   final Function? press;
 
   @override
@@ -23,10 +23,10 @@ class SocialCard extends StatelessWidget {
         height: getProportionateScreenHeight(40),
         width: getProportionateScreenWidth(40),
         decoration: const BoxDecoration(
-          color: Color(0xFFF5F6F9),
+          color:AppColors.white,
           shape: BoxShape.circle,
         ),
-        child: SvgPicture.asset(icon!),
+        child: icon // SvgPicture.asset(icon!),
       ),
     );
   }
